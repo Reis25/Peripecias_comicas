@@ -1,0 +1,9 @@
+Exemplo,Come,Vegetariano,Idade,Diabético,Classe
+1,pouco,sim,velho,sim,magro
+2,médio,sim,velho,não,magro
+3,muito,não,velho,sim,gordo
+4,pouco,não,velho,não,magro
+5,médio,não,jovem,sim,gordo
+6,pouco,sim,jovem,não,magro
+7,muito,não,velho,não,gordo
+8,médio,não,jovem,sim,gordo
