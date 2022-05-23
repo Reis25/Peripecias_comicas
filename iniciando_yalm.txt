@@ -1,0 +1,14 @@
+ Lingagem de marcação / Linguage de srialização dos dados (serialização - desserialização dos dados); 
+
+Serialização: é a técnica que permite converter objetos em bytes (colocando-os) em série e uma vez que eles são bytes,
+eles podem ser salvos em disco ou enviados através de um stream (via HTTP, via socket, entre outros)
+
+Possui os tipos de dados: escalares, arrays, lists; 
+
+Geralmente é usada como arquivo de configuração ou armazenamento de dados; 
+
+Tem como objetivo: 
+- Ser portátil. 
+- Integrar facilmente com outras liguagens; 
+- Facil de implementar e usar; 
+- fácil compreeensão humana; 
