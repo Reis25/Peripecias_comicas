@@ -1,0 +1,59 @@
+# Yaml em bloco;
+
+host: geek # Mapeamento chave-valor;
+datacenter1: 
+  location: SP
+  router: 42
+roles1: 
+  - web
+  - dns
+
+# Yaml em fluxo: 
+host2: geek 
+datacenter2: {location: SP,router: 42} 
+roles2: [web, dns] 
+
+Exemplo: | # pipe respeita a quebra de linha
+  exemplo1 
+  exemplo2 
+  exemplo3 
+
+exemplo2: > # Nao vai respeitar a quebra de linha 
+  exemplo1 
+  exemplo2 
+  exemplo3 
+
+# Estruturas YAML
+--- 
+# Após esses traços teremos outras configurações que podemos usar os mesmos escalares; 
+# Permite múltiplas configurações no mesmo arquivo; 
+
+--- 
+# Usando Tags
+
+%TAG ! tag:host:reis:
+
+host: geek # Mapeamento chave-valor;
+datacenter1: 
+  location: !reis SP
+  router: 42
+roles1: 
+  - web
+  - dns
+
+--- # Usando Tgs nativas: 
+
+host: reis25 # Mapeamento chave-valor;
+datacenter1: 
+  location: reis SP
+  router: !!int 42 #informando que 'um número inteiro;'
+roles1: 
+  - !!str web # Informando que isso é uma string; 
+  - !!str dns # Informando que isso é uma string;
+
+--- 
+# Uso de ancoras; armazenar e reusar dados
+
+host: &a reis25 
+
+host2: *a # Fazendo referência a âncora acima;
