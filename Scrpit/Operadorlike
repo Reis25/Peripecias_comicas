@@ -1,0 +1,3 @@
+select * from clientes
+
+select * from clientes WHERE nome like '%-aa%'
